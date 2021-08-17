@@ -26,7 +26,7 @@ def arguments():
                         action="store", default=api_key, help="Specify VT API key")
     parser.add_argument("-q", "--quiet", dest="QUIET", action="store_true", help="Do not print vendor analysis results")
     parser.add_argument("-p", "--positive", dest="POSITIVE", action="store_true", help="Show only positive results in vendor analysis")
-    parser.add_argument("-o", "--out", dest="OUT", action="store_true", help="Save JSON response to a file")
+    parser.add_argument("-o", "--out", dest="OUT", metavar="<file>", action="store", help="Save JSON response to a file")
     parser.add_argument("-c", "--clear", dest="CLEAR", action="store_true", help="Clear screen before printing vendor analysis results ")
     res = parser.parse_args()
     return res
